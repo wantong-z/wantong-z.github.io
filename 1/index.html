@@ -36,7 +36,7 @@
             margin-bottom: 5px;
         }
 
-        h1, h2, h3, h4, p {
+        h1, h2, p {
             margin: 10px 0;
         }
     </style>
@@ -56,7 +56,7 @@
       We implemented exhaustive search using normalized cross-correlation (NCC) as the similarity metric. 
       To improve efficiency and robustness, we used an image pyramid strategy: we recursively align smaller downsampled versions of the images first, then refine the shifts at higher resolutions.</p>
 
-    <h3>Problems & Fixes</h3>
+    <h2>Problems & Fixes</h2>
     <p>
       Initially, the red layer was consistently misaligned, especially in the emir.tif image. 
       The resulting image appeared heavily blurred and had colored ghosting artifacts. 
@@ -67,7 +67,7 @@
       4. These changes significantly improved alignment quality.
     </p>
 
-    <h4>Results</h4>
+    <h2>Results</h2>
     <p>Below are results from the JPG images.</p>
     <div class="row">
       <figure>
