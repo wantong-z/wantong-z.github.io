@@ -47,10 +47,6 @@
       To align the channels, we treat the blue channel as the reference and align the green and red channels to it. 
       We implemented exhaustive search using normalized cross-correlation (NCC) as the similarity metric. 
       To improve efficiency and robustness, we used an image pyramid strategy: we recursively align smaller downsampled versions of the images first, then refine the shifts at higher resolutions.</p>
-    <div class="row">
-        <img src="./media/img8.jpeg" alt="Part 2 - Image 1">
-        <img src="./media/img9.jpeg" alt="Part 2 - Image 2">
-    </div>
 
     <h3>Problems & Fixes</h3>
     <p>
@@ -64,7 +60,85 @@
     </p>
 
     <h4>Results</h4>
-    <p>Below are the images.</p>
-    <img src="./media/a4xmhh.gif" alt="Part 3 - GIF">
+    <p>Below are results from the JPG images.</p>
+    <div class="row">
+      <figure>
+        <img src="./media/cathedral_output.jpg" alt="Cathedral">
+        <figcaption>Offsets used: Blue shift (–2, –5), Red shift (1, 7)</figcaption>
+      </figure>
+    
+      <figure>
+        <img src="./media/monastery_output.jpg" alt="Monastery">
+        <figcaption>Offsets used: Blue shift (–2, 3), Red shift (1, 6)</figcaption>
+      </figure>
+    
+      <figure>
+        <img src="./media/tobolsk_output.jpg" alt="Tobolsk">
+        <figcaption>Offsets used: Blue shift (–3, –3), Red shift (1, 4)</figcaption>
+      </figure>
+    </div>
+
+    <p>Below are results from the TIF images.</p>
+
+    <div class="row">
+        <figure>
+            <img src="./media/church_output.jpg" alt="Church">
+            <figcaption>Offsets used: Blue shift (-4, -25), Red shift (-8, 33)</figcaption>
+        </figure>
+        
+        <figure>
+            <img src="./media/emir_output.jpg" alt="Emir">
+            <figcaption>Offsets used: Blue shift (-24, -48), Red shift (17, 57)</figcaption>
+        </figure>
+
+        <figure>
+            <img src="./media/harvesters_output.jpg" alt="Harvesters">
+            <figcaption>Offsets used: Blue shift (-17, -59), Red shift (-3, 65)</figcaption>
+        </figure>
+
+        <figure>
+            <img src="./media/icon_output.jpg" alt="Icon">
+            <figcaption>Offsets used: Blue shift (-17, -41), Red shift (5, 49)</figcaption>
+        </figure>
+
+        <figure>
+            <img src="./media/italil_output.jpg" alt="Italil">
+            <figcaption>Offsets used: Blue shift (-24, -48), Red shift (17, 57)</figcaption>
+        </figure>
+
+        <figure>
+            <img src="./media/lastochikino_output.jpg" alt="Lastochikino">
+            <figcaption>Offsets used: Blue shift (-24, -48), Red shift (17, 57)</figcaption>
+        </figure>
+    </div>
+
+    <div class="row">
+        <figure>
+            <img src="./media/lugano_output.jpg" alt="Lugano">
+            <figcaption>Offsets used: Blue shift (-24, -48), Red shift (17, 57)</figcaption>
+        </figure>
+
+        <figure>
+            <img src="./media/melons_output.jpg" alt="Melons">
+            <figcaption>Offsets used: Blue shift (-24, -48), Red shift (17, 57)</figcaption>
+        </figure>
+
+        <figure>
+            <img src="./media/self_portrait_output.jpg" alt="Self portrait">
+            <figcaption>Offsets used: Blue shift (-24, -48), Red shift (17, 57)</figcaption>
+        </figure>
+        
+        <figure>
+            <img src="./media/siren_output.jpg" alt="Siren">
+            <figcaption>Offsets used: Blue shift (-24, -48), Red shift (17, 57)</figcaption>
+        </figure>
+
+        <figure>
+            <img src="./media/three_generations_output.jpg" alt="Three generations">
+            <figcaption>Offsets used: Blue shift (-24, -48), Red shift (17, 57)</figcaption>
+        </figure>
+    </div>
+            
+</figure>
 </body>
 </html>
