@@ -1,1 +1,70 @@
-<h1>This is Project 1</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project 0</title>
+    <style>
+        body {
+            font-family: Times New Roman, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+
+        .row img {
+            width: 18%;
+            min-width: 100px;
+        }
+
+
+        h1, h2, p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Project 1</h1>
+    <p>This page showcases the results for Project 1.</p>
+
+    <h2>Overview</h2>
+    <p>This project implements color image alignment based on Prokudin-Gorskii’s glass plate negatives. 
+      Each input image consists of three vertically stacked grayscale exposures of the same scene, representing the blue, green, and red channels respectively. 
+      The goal is to extract these channels, align them properly using pyramid-based search, and reconstruct a single aligned RGB color image.</p>
+
+    <h2>Approach</h2>
+    <p>We start by splitting the input image into three equal vertical slices for blue, green, and red channels. 
+      To align the channels, we treat the blue channel as the reference and align the green and red channels to it. 
+      We implemented exhaustive search using normalized cross-correlation (NCC) as the similarity metric. 
+      To improve efficiency and robustness, we used an image pyramid strategy: we recursively align smaller downsampled versions of the images first, then refine the shifts at higher resolutions.</p>
+    <div class="row">
+        <img src="./media/img8.jpeg" alt="Part 2 - Image 1">
+        <img src="./media/img9.jpeg" alt="Part 2 - Image 2">
+    </div>
+
+    <h3>Problems & Fixes</h3>
+    <p>
+      Initially, the red layer was consistently misaligned, especially in the emir.tif image. 
+      The resulting image appeared heavily blurred and had colored ghosting artifacts. 
+      We suspected the misalignment came from the scoring function being too sensitive to edges or noise. 
+      To address this, we: 1. Switched from using the full image to using center crops for scoring. 
+      2. Added blurring via custom convolution before downsampling. 
+      3. Added pyramid alignment to avoid being trapped in local optima at high resolution. 
+      4. These changes significantly improved alignment quality.
+    </p>
+
+    <h4>Results</h4>
+    <p>Below are the images.</p>
+    <img src="./media/a4xmhh.gif" alt="Part 3 - GIF">
+</body>
+</html>
