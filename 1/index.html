@@ -19,18 +19,22 @@
         .row {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
             justify-content: center;
-            align-items: flex-start;
+            gap: 20px;
         }
         
         figure {
             text-align: center;
             margin: 10px;
-            flex: 1 1 200px;
-            max-width: 220px;
+            width: 220px;
         }
-
+        
+        figure img {
+            width: 100%;  /* Responsive to figure */
+            height: auto;
+            display: block;
+            margin-bottom: 5px;
+        }
 
         h1, h2, h3, h4, p {
             margin: 10px 0;
